@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS336 2025 春季｜课件目录</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background: #f6f5f0;
+      color: #192b29;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .hero { background: #183b36; color: #fff; }
+    .content { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    header .content { padding-block: clamp(38px, 7vw, 76px); }
+    .term { margin: 0 0 12px; color: #bbd8ca; font-size: 0.95rem; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.65rem); line-height: 1.12; }
+    h2 { margin: 0; font-size: 1.35rem; }
+    main { padding-block: 32px 60px; }
+    .hint { margin: 8px 0 22px; color: #4b625c; font-size: 0.95rem; }
+    ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li { display: flex; }
+    li > a {
+      align-items: center;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0 10px;
+      width: 100%;
+      min-height: 70px;
+      padding: 14px;
+      border: 1px solid #ced9d0;
+      border-radius: 10px;
+      background: #fff;
+      color: inherit;
+      text-decoration: none;
+    }
+    li > a:hover { border-color: #377460; background: #edf5f0; }
+    a:focus-visible { outline: 3px solid #1a7154; outline-offset: 2px; }
+    .lecture-number { color: #396351; white-space: nowrap; font-size: 0.84rem; }
+    .lecture-title { font-weight: 600; line-height: 1.4; }
+    .format { color: #47615a; font-size: 0.82rem; }
+    .source { margin: 26px 0 0; color: #4b625c; font-size: 0.9rem; }
+    .source a { color: #205a48; }
+    @media (max-width: 480px) {
+      .content { width: calc(100% - 32px); }
+      li > a { min-height: 58px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="content">
+      <p class="term">Stanford CS336 · 2025 春季</p>
+      <h1>Language Modeling<br>from Scratch</h1>
+    </div>
+  </header>
+  <main class="content">
+    <h2>选择课件</h2>
+    <p class="hint">每讲都会在新标签页打开，方便随时切回目录。</p>
+    <ol>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_01.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 1 讲</span>
+          <span class="lecture-title">课程概览与分词</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_02.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 2 讲</span>
+          <span class="lecture-title">PyTorch 与资源估算</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%203%20-%20architecture.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 3 讲</span>
+          <span class="lecture-title">模型架构与超参数</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%204%20-%20MoEs.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 4 讲</span>
+          <span class="lecture-title">混合专家模型（MoE）</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%205%20-%20GPUs.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 5 讲</span>
+          <span class="lecture-title">GPU</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_06.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 6 讲</span>
+          <span class="lecture-title">GPU 内核与 Triton</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%207%20-%20Parallelism%20basics.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 7 讲</span>
+          <span class="lecture-title">并行训练基础</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_08.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 8 讲</span>
+          <span class="lecture-title">并行训练</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%209%20-%20Scaling%20laws%20basics.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 9 讲</span>
+          <span class="lecture-title">缩放定律基础</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_10.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 10 讲</span>
+          <span class="lecture-title">推理</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%2011%20-%20Scaling%20details.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 11 讲</span>
+          <span class="lecture-title">缩放定律详解</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_12.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 12 讲</span>
+          <span class="lecture-title">评估</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_13.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 13 讲</span>
+          <span class="lecture-title">数据（一）</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_14.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 14 讲</span>
+          <span class="lecture-title">数据（二）</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%2015%20-%20RLHF%20Alignment.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 15 讲</span>
+          <span class="lecture-title">对齐：SFT 与 RLHF</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./nonexecutable/2025%20Lecture%2016%20-%20RLVR.pdf" target="_blank" rel="noopener">
+          <span class="lecture-number">第 16 讲</span>
+          <span class="lecture-title">对齐：强化学习与可验证奖励</span>
+          <span class="format">PDF</span>
+        </a>
+      </li>
+      <li>
+        <a href="./viewer/?trace=var/traces/lecture_17.json" target="_blank" rel="noopener">
+          <span class="lecture-number">第 17 讲</span>
+          <span class="lecture-title">对齐：强化学习</span>
+          <span class="format">网页</span>
+        </a>
+      </li>
+    </ol>
+    <p class="source">课程资料来源　<a href="https://cs336.stanford.edu/spring2025/" target="_blank" rel="noopener">Stanford CS336 官方课程</a></p>
+  </main>
+</body>
+</html>

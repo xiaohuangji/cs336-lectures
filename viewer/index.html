@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trace Viewer</title>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        startup: { typeset: false },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" src="../mathjax/tex-svg.js"></script>
+    <script type="module">
+      window.MathJax.startup.promise.then(() => import("./assets/index-GgxbJ1vc.js"));
+    </script>
+    <link rel="stylesheet" crossorigin href="./assets/index-v8HUKLv5.css">
+    <style>
+      .course-toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 10px 24px;
+        border-bottom: 1px solid #ced9d0;
+        background: #f6f5f0;
+        font: 600 0.9rem/1.5 "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+      .course-toolbar a { color: #205a48; }
+      #course-start { scroll-margin-top: 54px; }
+    </style>
+  </head>
+  <body>
+    <nav class="course-toolbar" aria-label="课件导航">
+      <a href="../">← 返回课件目录</a>
+    </nav>
+    <div id="root"></div>
+    <script>
+      const viewer = document.getElementById("root");
+      const params = new URLSearchParams(location.search);
+      const hasPosition = ["source", "step", "line", "raw"].some(key => params.has(key));
+      if (!hasPosition) {
+        const jumpToNotes = new MutationObserver(() => {
+          const title = viewer.querySelector(".markdown :is(h1, h2, h3)");
+          if (title) {
+            jumpToNotes.disconnect();
+            title.id = "course-start";
+            requestAnimationFrame(() => title.scrollIntoView({ block: "start" }));
+          }
+        });
+        jumpToNotes.observe(viewer, { childList: true, subtree: true });
+      }
+    </script>
+  </body>
+</html>
